@@ -21,9 +21,24 @@ ul {
   display: flex;
 }
 
+.slideItems:hover {
+  will-change: transform;
+}
+
 .slideItems li {
   flex-shrink: 0;
   width: 80vw;
   max-width: 800px;
   margin: 0 24px;
+  border-radius: 5px;
+  overflow: hidden;
+
+  opacity: .7;
+  transform: scale(0.7);
+  transition: ease-in-out .3s;
+}
+
+.slideItems li.active {
+  opacity: 1;
+  transform: scale(1);
 }
