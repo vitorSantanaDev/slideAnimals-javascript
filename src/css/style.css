@@ -19,6 +19,7 @@ ul {
 
 .slideItems {
   display: flex;
+  margin-top: 24px;
 }
 
 .slideItems:hover {
@@ -27,8 +28,8 @@ ul {
 
 .slideItems li {
   flex-shrink: 0;
-  width: 80vw;
-  max-width: 800px;
+  width: 70vw;
+  max-width: 700px;
   margin: 0 24px;
   border-radius: 5px;
   overflow: hidden;
@@ -62,4 +63,48 @@ ul {
 
 [data-controll="slide"] li.active a, [data-controll="slide"] li a:hover {
   background-color: #E54;
+}
+
+.customControll {
+  flex-wrap: wrap;
+  display: flex;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+.customControll li {
+  width: 50px;
+  height: 50px;
+  opacity: 0.8;
+  transform: scale(.8);
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 2px;
+  box-shadow: 0 2px 2px rgba(0,0,0,.5);
+  transition: ease-in-out .3s;
+}
+
+.customControll li.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.arrowNav {
+   display: flex;
+   justify-content: space-around;
+   margin: 16px 8px;
+}
+
+.arrowNav button {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  color: #fFF;
+  border: none;
+  border-radius: 4px;
+  background: #fb5 url('../assets/images/arrow.svg') no-repeat center center;
+}
+
+.arrowNav button.prev {
+  transform: rotate(-180deg);
 }
